@@ -248,7 +248,7 @@ class AnkiWebView(QWebEngineView):
 
         self.resetHandlers()
         self._filterSet = False
-        QShortcut(  # type: ignore
+        self._close_shortcut = QShortcut(  # type: ignore
             QKeySequence("Esc"),
             self,
             context=Qt.ShortcutContext.WidgetWithChildrenShortcut,
